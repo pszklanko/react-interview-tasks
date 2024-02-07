@@ -22,7 +22,7 @@ export default function RandomColor() {
     }
 
     useEffect(() => {
-        handleGenerateRandomColor()
+        handleGenerateRandomColor();
     }, [typeOfColor])
     return <div style={{
         width: '100vw',
