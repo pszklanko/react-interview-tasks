@@ -37,6 +37,10 @@ export default function ImageSlider({ url, limit = 5, page = 1 }: { url: string,
         setCurrentImage(currentImage - 1)
     }
 
+    function changeActive(index: number) {
+        setCurrentImage(index);
+    }
+
     if (loading) {
         return <div>Loading...</div>
     }
@@ -55,7 +59,7 @@ export default function ImageSlider({ url, limit = 5, page = 1 }: { url: string,
         <BsArrowRightCircleFill className="arrow arrow-right" onClick={handleNext}></BsArrowRightCircleFill>
         <span className="circle-indicators">
             {
-                images.map((_, index) => <button key={index} className={`current-indicator  ${index === currentImage ? 'active-indicator' : ''}`}></button>)
+                images.map((_, index) => <button key={index} onClick={() => changeActive(index)} className={`current-indicator  ${index === currentImage ? 'active-indicator' : ''}`}></button>)
             }
         </span>
     </div>
