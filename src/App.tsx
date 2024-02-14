@@ -8,7 +8,7 @@ function App() {
     // <Accordion></Accordion>
     // <RandomColor></RandomColor>
     // <StarRating noOfStars={20}></StarRating>
-    <ImageSlider url={'https://picsum.photos/v2/list'}></ImageSlider>
+    <ImageSlider url={'https://picsum.photos/v2/list'} limit={5}></ImageSlider>
   );
 }
 
